@@ -26,7 +26,7 @@
 ### Клонировать репозиторий
 
 ```bash
-git clone <repo-url>
+git clone [<=(https://github.com/1exyy/eventloop)](https://github.com/1exyy/eventloop)>
 cd eventloopvisualization
 ```
 
