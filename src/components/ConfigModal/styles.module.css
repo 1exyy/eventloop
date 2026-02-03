@@ -1,0 +1,15 @@
+.inputGroup {
+    margin-bottom: 12px;
+}
+
+.inputGroup > div{
+    width: 100%;
+}
+
+.inputGroup input {
+    height: 40px;
+}
+
+.resetButton{
+    height: 40px;
+}

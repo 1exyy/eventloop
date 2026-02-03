@@ -1,0 +1,29 @@
+.wrapper {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+    max-height: 100%;
+}
+
+.title {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.title span {
+    color: inherit;
+    font-size: var(--font-size-lg);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 85%;
+}

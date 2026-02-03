@@ -1,0 +1,111 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--opacity-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modalOverlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalOverlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modalContent {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 25px var(--shadow);
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    transform: scale(0.7);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modalContent.visible {
+    transform: scale(1);
+}
+
+.modalContent.hidden {
+    transform: scale(0.7);
+}
+
+.modalContent.sm {
+    max-width: 300px;
+}
+
+.modalContent.md {
+    max-width: 500px;
+}
+
+.modalContent.lg {
+    max-width: 700px;
+}
+
+.modalContent.xl {
+    max-width: 900px;
+    width: 95%;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.modalTitle {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    color: var(--text-primary);
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: var(--font-size-2xl);
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+    background-color: var(--opacity-10);
+    color: var(--text-primary);
+}
+
+.modalBody {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    color: var(--text-primary);
+}
+
+/* Добавляем правило для предотвращения прокрутки фона при открытом модальном окне */
+body.modal-open {
+    overflow: hidden;
+}

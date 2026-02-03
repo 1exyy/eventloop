@@ -1,0 +1,7 @@
+.app_container {
+    display: grid;
+    padding: 32px;
+    height: 100vh;
+    gap: 32px;
+    grid-template-rows: repeat(3, minmax(300px, 1fr));
+}

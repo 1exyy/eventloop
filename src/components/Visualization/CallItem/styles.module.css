@@ -1,0 +1,19 @@
+.item {
+    padding: 6px;
+    border-radius: var(--radius-sm);
+}
+
+.microtask {
+    background: var(--task-microtask);
+    color: var(--text-primary);
+}
+
+.macrotask {
+    background: var(--task-macrotask);
+    color: var(--text-primary);
+}
+
+.callstack {
+    background: var(--task-render);
+    color: var(--text-primary);
+}

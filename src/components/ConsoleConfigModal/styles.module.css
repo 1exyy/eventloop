@@ -1,0 +1,11 @@
+.item {
+    margin-bottom: 8px;
+}
+
+.item > label {
+    font-size: var(--font-size-md);
+}
+
+.button{
+    margin-top: 12px;
+}

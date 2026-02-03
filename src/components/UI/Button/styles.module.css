@@ -1,0 +1,71 @@
+.button {
+    background: none;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 12px 24px;
+    font-size: var(--font-size-base);
+    border-radius: var(--radius-sm);
+}
+
+.button.base {
+    background: var(--btn-neutral);
+}
+
+.button.base:active {
+    background: var(--btn-neutral-active);
+}
+
+.button.base:hover {
+    background: var(--btn-neutral-hover);
+}
+
+.button.reset {
+    background: var(--btn-reset);
+}
+
+.button.reset:active {
+    background: var(--btn-reset-active);
+}
+
+.button.reset:hover {
+    background: var(--btn-reset-hover);
+}
+
+.button.step {
+    background: var(--btn-step);
+}
+
+.button.step:active {
+    background: var(--btn-step-active);
+}
+
+.button.step:hover {
+    background: var(--btn-step-hover);
+}
+
+.button.run {
+    background: var(--btn-run);
+}
+
+.button.run:active {
+    background: var(--btn-run-active);
+}
+
+.button.run:hover {
+    background: var(--btn-run-hover);
+}
+
+.button:disabled {
+    cursor: default;
+    background: var(--btn-disabled);
+    color: var(--btn-disabled-text);
+}
+
+.button:disabled:hover {
+    background: var(--btn-disabled);
+    color: var(--btn-disabled-text);
+}
+

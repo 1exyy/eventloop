@@ -1,0 +1,71 @@
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.75rem;
+    user-select: none;
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+}
+
+.checkboxInput {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkboxCustom {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--border);
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-xs);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.checkboxCustom::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--text-primary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.checkboxInput:checked + .checkboxCustom {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.checkboxInput:checked + .checkboxCustom::after {
+    opacity: 1;
+}
+
+.checkboxInput:focus-visible + .checkboxCustom {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+.checkboxLabel {
+    margin-left: 0.5rem;
+}
+
+.checkboxContainer.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.checkboxContainer.disabled .checkboxCustom {
+    background-color: var(--btn-disabled);
+    border-color: var(--btn-disabled-text);
+    cursor: not-allowed;
+}
