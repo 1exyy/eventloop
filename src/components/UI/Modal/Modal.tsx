@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 import type {FC, PropsWithChildren} from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { createPortal } from 'react-dom';
 
@@ -52,7 +52,6 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
         setTimeout(onClose, 300);
     };
 
-    // Обработчик клика по оверлею
     const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
         if (e.target === e.currentTarget) {
             handleClose();

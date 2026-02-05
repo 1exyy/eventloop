@@ -185,7 +185,6 @@ export const useEventLoopStore = create<EventLoopState>((set, get) => ({
             processNextMacrotask,
         } = get();
 
-        // Получаем конфигурацию из configStore
         const { syncCodeExecutionTimeMs, maxIterations } = useConfigStore.getState();
 
         setIsRunning(true);

@@ -10,7 +10,7 @@ interface ConfigState {
     syncCodeExecutionTimeMs: number;
     setSyncCodeExecutionTimeMs: (time: number) => void;
 
-    // Максимальное количество итераций для защиты от бесконечных циклов
+    // Максимальное количество итераций
     maxIterations: number;
     setMaxIterations: (max: number) => void;
 

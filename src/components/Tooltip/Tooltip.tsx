@@ -26,7 +26,6 @@ export const Tooltip: FC<TooltipProps> = ({
 
             let calculatedPosition: 'top' | 'bottom' | 'left' | 'right' = 'top';
 
-            // Проверяем доступное пространство по всем направлениям
             const space = {
                 top: triggerRect.top,
                 bottom: viewportHeight - triggerRect.bottom,
@@ -34,7 +33,6 @@ export const Tooltip: FC<TooltipProps> = ({
                 right: viewportWidth - triggerRect.right,
             };
 
-            // Находим направление с наибольшим свободным местом
             if (tooltipRect.width <= space.right && tooltipRect.height <= space.bottom) {
                 calculatedPosition = 'right';
             } else if (tooltipRect.width <= space.left && tooltipRect.height <= space.bottom) {
