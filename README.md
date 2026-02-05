@@ -21,12 +21,16 @@
 
 ---
 
+# Демо
+
+https://eventloop-ashen.vercel.app/
+
 ## ⚙️ Установка и запуск
 
 ### Клонировать репозиторий
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/1exyy/eventloop
 cd eventloopvisualization
 ```
 
